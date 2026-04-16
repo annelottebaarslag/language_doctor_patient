@@ -1,0 +1,2 @@
+# Applying BEL
+This part of the code is for applying BEL to the interview data. The python file `make_txt_files.py` is used for creating text files from the csv files that are created for the "level" goal. The python file `random_sentence.py` is used for creating a text file for either validation or evaluation. The text files created in these two python files can be used in the notebook `NRBEL_pipeline.ipynb` for NER and BEL.
