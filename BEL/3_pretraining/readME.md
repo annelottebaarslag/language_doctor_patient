@@ -1,5 +1,5 @@
 # 2nd phase pretraining #
-In this part we perform 2nd phase pretraining of sapBERT.
+In this part we perform 2nd phase pretraining of sapBERT. This is mainly copied from [the pretraining part of the repository of Hartendorp et al](https://github.com/fonshartendorp/dutch_biomedical_entity_linking/tree/main/3_2nd-phase-pretrain_sapBERT).
 
 ## Generating positive pairs ##
 First, use the notebook ``generate_positive_pairs.ipynb`` to generate the file for the pretraining using the enhanced UMLS which was created in ``1_enhance_UMLS``. In order to do so we need sapBERT. SapBERT can be downloaded from the GitHub repository https://github.com/cambridgeltl/sapbert. Next, unzip the folder and move it into this folder, ``3_2nd_phase-pretrain_sapBERT``. 

@@ -1,6 +1,7 @@
 import os, random, pysbd
 
 segmenter = pysbd.Segmenter(language="nl", clean=True)
+## Use line below only for evaluation
 # val_sentences = segmenter.segment(open("Apply BEL/random_100.txt", "r", encoding='utf-8').read())
 
 random_file = open("Apply BEL/random_100_eval.txt", "w", encoding='utf-8')

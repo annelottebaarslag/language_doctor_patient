@@ -59,6 +59,7 @@ samples = []
 rows = []
 uid = 0
 
+# Loop over all wiki extractor files and save all bel mentions
 for root, _, files in os.walk("2_generate_corpus/wikiextractor/outnlcat4"):
     for fn in files:
         with open(os.path.join(root, fn), encoding="utf-8") as f:

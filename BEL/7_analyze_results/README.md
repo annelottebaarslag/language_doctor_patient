@@ -1,2 +1,2 @@
 # Analyse results
-This part of the code is used for analyzing the results of the BEL. This is all done in the notebook `analyzebel.ipynb`. The file with the 1000 most common Dutch words (`1000woorden.txt`) and the UMLS semantic types (`umls_sem_types.txt`) are also provided in this folder.
+This part of the code is used for analyzing the results of the BEL. This is all done in the notebook `analyzebel.ipynb`. The file with the 1000 most common Dutch words (`1000woorden.txt`) and the UMLS semantic types (`umls_sem_types.txt`) are also provided in this folder. The semantic types are forked from [this github](https://gist.github.com/joelkuiper/4869d148333f279c2b2e).

@@ -67,7 +67,7 @@ catRE = re.compile(r'\[\[Category:([^\|]+).*\]\].*')
 Also change the categories file by the English categories file and change the output folder from `outnl` to `outnl` so your Dutch folder doesn't get overwritten.
 
 ## Retrieving wikipedia entries
-For running the SPARQL query, run `retrieve_query.py`. You can add or delete semantic categories in the excluded list. For retrieving the English query results instead of the Dutch, change the domain variable in `fetch_candidates` from `nl.wikipedia.org` to `en.wikipedia.org`. The resulting jsonl file consists of the results in the format:
+For running the SPARQL query, run `retrieve_query.py`. This part of the code is based on [this part of the repository of Hartendorp et al.](https://github.com/fonshartendorp/dutch_biomedical_entity_linking/blob/main/2_generate_corpus/generate_corpus.py). You can add or delete semantic categories in the excluded list. For retrieving the English query results instead of the Dutch, change the domain variable in `fetch_candidates` from `nl.wikipedia.org` to `en.wikipedia.org`. The resulting jsonl file consists of the results in the format:
     {
       "sentence": "<Sentence>",
       "annotations": [

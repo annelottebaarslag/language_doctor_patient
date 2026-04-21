@@ -15,30 +15,6 @@ The resulting concept tables can be used in named entity recognition and linking
 
 Data and licenses should be acquired from [UMLS Terminology Services](https://uts.nlm.nih.gov/uts/) and [SNOMED MLDS](https://mlds.ihtsdotools.org/). 
 
-## Table of Contents
-- [Folder structure](#folder-structure)
-- [Output format](#output-format)
-- [Data-flow](#data-flow)
-- [Generate UMLS concept table](#generate-umls-concept-table)
-	- [1. Obtain license and download complete UMLS](#1-obtain-license-and-download-complete-umls)
-	- [2. Decompress and install MetamorphoSys](#2-decompress-and-install-metamorphosys)
-	- [3. Select UMLS concepts for Dutch medical language using MetamorphoSys](#3-select-umls-concepts-for-dutch-medical-language-using-metamorphosys)
-	- [4. Load all terms in a SQL database](#4-load-all-terms-in-a-sql-database)
-	- [5. Create concept table](#5-create-concept-table)
-- [Generate SNOMED concept table](#generate-snomed-concept-table)
-- [Generate HPO concept table](#generate-hpo-concept-table)
-- [Generate MedCAT models](#generate-medcat-models)
-
-## Folder structure
-The methods of this repository require a number of input files, which should be downloaded by the user, and intermediate and output files are generated. This repository contains a folder structure that can be used for storing these files. The contents of these folders, except for `05_CustomChanges`, are added not tracked by Git, which makes it easier to replace input files or recreate output files.
-```
-dutch-medical-concepts
-└───01_Download
-└───02_ExtractSubset
-└───03_SqlDB
-└───04_ConceptDB
-└───05_CustomChanges
-```
 
 ## Output format
 | cui      | name                     | ontologies           | name_status | type_ids |

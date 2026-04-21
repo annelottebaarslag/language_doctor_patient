@@ -8,7 +8,7 @@ import csv
 umls_csv = "1_enhance_UMLS/04_ConceptDB/umls-dutch_v1.11_with_drugs_filtered-categories.csv"
 batch_size = 1000
 
-# Excluded semantic groups from the UMLS
+# excluded semantic groups from the UMLS
 excluded = {
     "T078","T089","T011","T008","T012","T013","T015","T001","T014","T010",
     "T168","T093","T083",
@@ -17,6 +17,7 @@ excluded = {
     "T097","T094","T080","T081","T095","T082","T079",
 }
 
+# load only medical cuis that are not in the excluded tuis
 def load_medical_cuis(umls_csv):
     medical_cuis = set()
     with open(umls_csv, newline="", encoding="utf-8") as f:
@@ -27,6 +28,8 @@ def load_medical_cuis(umls_csv):
                 medical_cuis.add(row["cui"])
     return medical_cuis
 
+
+# sparql query
 def build_query(limit, offset, domain):
     return f"""
     SELECT ?article ?concept ?cui WHERE {{
@@ -38,6 +41,7 @@ def build_query(limit, offset, domain):
     OFFSET {offset}
     """
 
+# execute sparql query and only keep the non excluded cuis
 def fetch_candidates(medical_cuis, output_jsonl, domain):
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.setReturnFormat(JSON)
