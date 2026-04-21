@@ -144,7 +144,7 @@ def create_dataset(data):
     duration_list = []
     filename_list = []
 
-    input_folder = f"Transcripten_Redownload/Transcripten {data}"
+    input_folder = f"Transcripten/Transcripten {data}"
 
     for entry in sorted(os.listdir(input_folder)):
         entry_path = os.path.join(input_folder, entry)

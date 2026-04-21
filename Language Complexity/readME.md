@@ -1,7 +1,10 @@
 # Language complexity
 This folder contains all files for calculating and analyzing the language complexity of doctor and patient in the consults.
 ## Make dataset
-The file `makedataset.py` is for creating structured files from the consults which can be used for analysis.
+The file `makedataset.py` is for creating structured files from the consults which can be used for analysis. There are three goals:
+- level is for creating files for determining the complexity of doctor and patient (used in `complexity_analysis.ipynb`) and is used in the `BEL` folder for creating .txt files.
+- classifier is for creating a file for applying the classifier (used in `classifier.py`).
+- dialogue is for creating files per consult. We end up not using this, but can still be useful.
 ## Classifier
 The file `classifier.py` is for using a classifier to distinguish between doctor and patient turns. The results correspond to the thesis section "Distinguishing doctor and patient turns with a classifier".
 ## Complexity analysis

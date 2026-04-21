@@ -210,8 +210,6 @@ def create_dataset(data, goal):
         output_folder = f"{data}_classifier"
     elif goal == "level":
         output_folder = f"{data}_level"
-    elif goal == "word_doc":
-        output_folder = f"{data}_word_doc"
     elif goal == "dialogue":
         output_folder = f"{data}_dialogue"
     else:
@@ -289,17 +287,6 @@ def create_dataset(data, goal):
             os.path.join(output_folder, f"{data}_classifier.csv"),
             index=False,
             quoting=1
-        )
-
-    if goal == "word_doc":
-        arts_filtered = [t for t in all_arts if 10 <= len(t.split()) <= 30]
-        patient_filtered = [t for t in all_patients if 10 <= len(t.split()) <= 30]
-
-        pd.DataFrame({"text": arts_filtered, "label": ["Doctor"]*len(arts_filtered)}).to_csv(
-            os.path.join(output_folder, f"{data}_Arts.csv"), index=False, quoting=1
-        )
-        pd.DataFrame({"text": patient_filtered, "label": ["Patient"]*len(patient_filtered)}).to_csv(
-            os.path.join(output_folder, f"{data}_Patient.csv"), index=False, quoting=1
         )
 
 
